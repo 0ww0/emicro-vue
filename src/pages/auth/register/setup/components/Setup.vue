@@ -8,23 +8,38 @@
 
         <div class="form-control">
             <label :class="[ validate.mobile ? 'form-error' : '' ]">
-                <p>Mobile Number</p>
-                <input v-model="field.mobile" type="text" name="mobile" placeholder="Enter mobile number">
+                <p>Password</p>
+                <input v-model="field.mobile" type="text" name="password" placeholder="Enter password">
                 <p v-if="validate.mobile" class="validate"> {{ validate.mobile_text }} </p>
             </label>
         </div>
 
         <div class="form-control">
-            <label :class="[ validate.verified ? 'form-error' : '' ]">
-                <p>SMS verification</p>
-                <div class="form-input">
-                    <input v-model="field.verified" type="tel" name="verified" placeholder="Enter SMS verification">
-                    <button class="verified">
-                        Get The Verification Code
-                    </button>
-                </div>
-                <p v-if="validate.verified" class="validate"> {{ validate.verified_text }} </p>
+            <label :class="[ validate.mobile ? 'form-error' : '' ]">
+                <p>Re-enter the password</p>
+                <input v-model="field.mobile" type="text" name="password" placeholder="Re-enter the password">
+                <p v-if="validate.mobile" class="validate"> {{ validate.mobile_text }} </p>
             </label>
+        </div>
+
+        <div class="form-control">
+            <label :class="[ validate.mobile ? 'form-error' : '' ]">
+                <p>Email address</p>
+                <input v-model="field.mobile" type="text" name="mobile" placeholder="Enter email address">
+                <p v-if="validate.mobile" class="validate"> {{ validate.mobile_text }} </p>
+            </label>
+        </div>
+
+        <div class="form-control">
+            <label :class="[ validate.mobile ? 'form-error' : '' ]">
+                <p>Referral code (optional)</p>
+                <input v-model="field.mobile" type="text" name="mobile" placeholder="Enter referral code">
+                <p v-if="validate.mobile" class="validate"> {{ validate.mobile_text }} </p>
+            </label>
+        </div>
+
+        <div class="form-control">
+            <p class="term">Click the 'Sign Up' button, Agree to <a :href="public_url + '/'">Emicro Loan Services</a> and <a :href="public_url + '/'">Privacy Policy</a>.</p>
         </div>
 
         <div class="form-control">
@@ -55,6 +70,10 @@ export default {
     }),
 
     computed: {
+        public_url () {
+            return window.location.origin
+        },
+
         field () {
             return this.$store.getters.field;
         },
@@ -70,3 +89,13 @@ export default {
 
 }
 </script>
+
+<style lang="scss" scoped>
+    .term {
+        font-size: 12px;
+
+        a{
+            color: #018fc3;
+        }
+    }
+</style>

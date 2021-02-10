@@ -1,7 +1,7 @@
 export const state = {
     field: {
         mobile: "",
-        password: ""
+        verified: ""
     },
     isLoading: false,
     errors: null,

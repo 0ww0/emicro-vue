@@ -18,7 +18,7 @@
             <label :class="[ validate.verified ? 'form-error' : '' ]">
                 <p>SMS verification</p>
                 <div class="form-input">
-                    <input v-model="field.verified" type="tel" name="verified" placeholder="Enter SMS verification">
+                    <input v-model="field.verified" type="text" name="verified" placeholder="Enter SMS verification">
                     <button class="verified">
                         Get The Verification Code
                     </button>
@@ -28,7 +28,7 @@
         </div>
 
         <div class="form-control">
-            <button :disabled="isLoading" :class="isLoading ? 'is-loading' : ''" class="submit" @click = "onNext()">
+            <button :disabled="isLoading" :class="isLoading ? 'is-loading' : ''" class="submit" >
                 Next
             </button>
         </div>
@@ -49,8 +49,8 @@ export default {
         validate: {
             mobile: false,
             mobile_text: "",
-            password: false,
-            password_text: ""
+            verified: false,
+            verified_text: ""
         }
     }),
 
