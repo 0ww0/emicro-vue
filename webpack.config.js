@@ -9,6 +9,7 @@ module.exports = {
         'js/main': './src/main.js',
         'js/auth/login': './src/pages/auth/login/index.js',
         'js/auth/forgot': './src/pages/auth/forgot/index.js',
+        'js/auth/register': './src/pages/auth/register/index.js',
         'js/legal/policy': './src/pages/legal/policy/index.js',
         'js/legal/service': './src/pages/legal/service/index.js'
     },

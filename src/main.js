@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import Entry from './app.vue'
+import Entry from './Entry.vue'
 
 new Vue({
     el: '#app',

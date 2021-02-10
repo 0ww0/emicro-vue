@@ -1,5 +1,5 @@
 <template>
-    <section class="forgot wrapper">
+    <wrapper class="forgot">
 		<navbar/>
 		<div class="flex-holder">
 			<div class="form">
@@ -17,7 +17,12 @@
 				<div class="form-control">
 					<label :class="[ validate.verified ? 'form-error' : '' ]">
 						<p>SMS verification</p>
-						<input v-model="field.verified" type="tel" name="verified" placeholder="SMS verification">
+						<div class="form-input">
+							<input v-model="field.verified" type="tel" name="verified" placeholder="Enter SMS verification">
+							<button class="verified">
+								Get The Verification Code
+							</button>
+						</div>
 						<p v-if="validate.verified" class="validate"> {{ validate.verified_text }} </p>
 					</label>
 				</div>
@@ -37,25 +42,27 @@
 					</label>
 				</div>
 				<div class="form-control">
-					<button :disabled="isLoading" :class="isLoading ? 'is-loading' : ''" @click = "onSubmit()">
+					<button :disabled="isLoading" :class="isLoading ? 'is-loading' : ''" class="submit" @click = "onSubmit()">
 						Reset Immediately
 					</button>
 				</div>
 			</div>
 		</div>
-	</section>
+	</wrapper>
 </template>
 
 <script>
 import notification from './../../../components/Notification'
 import navbar from './components/Navbar'
+import wrapper from './../../../components/Wrapper'
 
 export default {
     name: "Login",
 
     components: {
         notification,
-        navbar
+        navbar,
+		wrapper
     },
 
     data: () => ({
@@ -132,12 +139,6 @@ export default {
 <style lang="scss" scoped>
     @import "./../../../assets/style/config";
 
-    .wrapper {
-		width: 100%;
-		height: 100vh;
-		font-size: 14px;
-	}
-
 	.flex-holder {
 		display: flex;
 		flex-flow: column nowrap;
@@ -169,6 +170,7 @@ export default {
 			color: #868686;
 			font-size: 12px;
 			padding: 5px;
+			margin-bottom: 0;
 		}
 
 		p.title {
@@ -186,7 +188,7 @@ export default {
             font-size: 14px;
         }
 
-        button {
+        button.submit {
             width: 100%;
             padding: 12px;
             border-radius: 4px;
@@ -198,6 +200,32 @@ export default {
             color: #ffffff;
             font-weight: 600;
         }
+
+	}
+
+	.form-input {
+		display: flex;
+		flex-flow: row nowrap;
+		flex-direction: row;
+		
+		input {
+			width: calc(70% - 5px);
+			margin-right: 5px;
+		}
+
+		button.verified {
+			width: 30%;
+			font-size: 8px;
+			padding: 4px;
+			border-radius: 4px;
+            border: 0;
+            cursor: pointer;
+            text-transform: uppercase;
+            outline: none;
+            background-color: #018fc3;
+            color: #ffffff;
+            font-weight: 600;
+		}
 	}
 
 	.form-error {

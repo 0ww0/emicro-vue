@@ -1,5 +1,5 @@
 <template>
-    <section class="login-wrapper">
+    <wrapper class="login">
 		<navbar/>
 		<div class="flex-holder">
 			<logo/>
@@ -29,13 +29,14 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</wrapper>
 </template>
 
 <script>
 import notification from './../../../components/Notification'
 import navbar from './../../../components/Navbar'
 import logo from './../../../components/Logo'
+import wrapper from './../../../components/Wrapper'
 
 export default {
     name: "Login",
@@ -43,10 +44,12 @@ export default {
     components: {
         notification,
         navbar,
-		logo
+		logo,
+        wrapper
     },
 
     data: () => ({
+        
     }),
 
     computed: {
@@ -128,12 +131,6 @@ export default {
 <style lang="scss" scoped>
     @import "./../../../assets/style/config";
 
-    .login-wrapper {
-		width: 100%;
-		height: 100vh;
-		font-size: 14px;
-	}
-	
 	.flex-holder {
 		display: flex;
 		flex-flow: column nowrap;
