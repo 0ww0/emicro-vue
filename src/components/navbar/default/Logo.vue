@@ -1,27 +1,29 @@
 <template>
     <div class="navbar">
-        <div class="link-button">
-            <a href="#">Sign Up</a>
-        </div>
+        <logo />
 	</div>
 </template>
 
 <script>
+import logo from './../../Logo'
+
 export default {
-    name: "Navbar"
+    name: "Navbar",
+
+	components: {
+		logo
+	},
 }
 </script>
 
 <style lang="scss" scoped>
-    @import "./../../../../assets/style/config";
-
 	.navbar {
 		width: 100%;
 		height: 60px;
 		display: flex;
 		flex-flow: row nowrap;
 		flex-direction: row;
-		justify-content: flex-end;
+		justify-content: center;
 		align-items: center;
 		padding: 10px 20px;
 	}
@@ -38,6 +40,22 @@ export default {
                 background-color: #018fc3;
 		        color: #ffffff;
             }
+
+			span {
+				display: inline-block;
+				vertical-align: middle;
+			}
 	    }
     }
+
+	.link-atag {
+		width: 75px;
+		a {
+			font-weight: 600;
+			svg, span {
+				display: inline-block;
+				vertical-align: middle;
+			}
+		}
+	}
 </style>

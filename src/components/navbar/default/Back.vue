@@ -6,12 +6,12 @@
 				<span>Back</span>
 			</a>
         </div>
-        <logo navbar/>
+        <logo centerBack small/>
 	</div>
 </template>
 
 <script>
-import logo from './../../../../components/Logo'
+import logo from './../../Logo'
 import { PhCaretLeft } from "phosphor-vue"
 
 export default {
@@ -31,8 +31,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    @import "./../../../../assets/style/config";
-
 	.navbar {
 		width: 100%;
 		height: 60px;

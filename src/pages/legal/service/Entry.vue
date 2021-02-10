@@ -8,8 +8,8 @@
 </template>
 
 <script>
-import navbar from './components/Navbar.vue'
-import wrapper from './../../../components/Wrapper'
+import navbar from './../../../components/navbar/default/Back'
+import wrapper from './../../../components/wrapper/Section'
 
 export default {
   	components: { 

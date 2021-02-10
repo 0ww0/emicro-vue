@@ -1,5 +1,5 @@
 <template>
-	<div class="logo-holder" :class="[navbar ? 'logo-navi' : '']">
+	<div class="logo-holder" :class="[centerBack ? 'center-back' : '', center ? 'center' : '', small ? 'small' : '']">
 		<img :src="logo" alt="e-micro">
 	</div>
 </template>
@@ -9,7 +9,9 @@ import logo from './../assets/image/logo.png'
 
 export default {
 	props: {
-		navbar: Boolean,
+		centerBack: Boolean,
+		center: Boolean,
+		small: Boolean
 	},
 	data: () => ({
         logo: logo,
@@ -20,13 +22,18 @@ export default {
 <style lang='scss' scoped>
 	.logo-holder {
 		width: 160px;
-		margin: 20px auto;
+	}
 
-		&.logo-navi {
-			width: 90px;
-			margin: 0;
-			margin-left: auto;
-    		margin-right: calc(50% - 45px);
-		}
+	.small {
+		width: 90px;
+	}
+
+	.center {
+		margin: 0 auto;
+	}
+
+	.center-back {
+		margin-left: auto;
+		margin-right: calc(50% - 45px);
 	}
 </style>

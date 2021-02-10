@@ -4,12 +4,6 @@
 	</section>
 </template>
 
-<script>
-export default {
-	name: "Wrapper"
-}
-</script>
-
 <style lang="scss">
 	.wrapper {
 		width: 100%;

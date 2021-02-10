@@ -9,9 +9,11 @@ module.exports = {
         'js/main': './src/main.js',
         'js/auth/login': './src/pages/auth/login/index.js',
         'js/auth/forgot': './src/pages/auth/forgot/index.js',
-        'js/auth/register': './src/pages/auth/register/index.js',
+        'js/auth/register/index': './src/pages/auth/register/index/index.js',
+        'js/auth/register/setup': './src/pages/auth/register/setup/index.js',
         'js/legal/policy': './src/pages/legal/policy/index.js',
-        'js/legal/service': './src/pages/legal/service/index.js'
+        'js/legal/service': './src/pages/legal/service/index.js',
+        'js/account/index': './src/pages/app/account/index/index.js',
     },
     output: {
         path: path.resolve(__dirname, './dist/'),
