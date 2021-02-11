@@ -39,12 +39,12 @@
         </div>
 
         <div class="form-control">
-            <p class="term">Click the 'Sign Up' button, Agree to <a :href="public_url + '/'">Emicro Loan Services</a> and <a :href="public_url + '/'">Privacy Policy</a>.</p>
+            <p class="term">Click the 'Sign Up' button, Agree to <a :href="public_url + '/legal/service.html'">Emicro Loan Services</a> and <a :href="public_url + '/legal/policy.html'">Privacy Policy</a>.</p>
         </div>
 
         <div class="form-control">
             <button :disabled="isLoading" :class="isLoading ? 'is-loading' : ''" class="submit" @click = "onNext()">
-                Next
+                Sign Up
             </button>
         </div>
     </formW>

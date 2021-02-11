@@ -3,12 +3,10 @@
 		<navbar />
 		<flexBottom>
 			<div class="title-holder">
-				<p>How It Work</p>
+				<p>My Loan</p>
 			</div>
 			<bkContent>
-				<div class="content-title">
-					
-				</div>
+				
 			</bkContent>
 		</flexBottom>
 		<botbar />
@@ -28,7 +26,7 @@ export default {
 	  	navbar,
 		flexBottom,
 		botbar,
-    	bkContent
+		bkContent
 	},
 }
 </script>
@@ -41,12 +39,5 @@ export default {
 		background-color: #018fc3;
         color: #ffffff;
 		padding: 15px 20px;
-	}
-	
-	.content{
-		&-title {
-			font-size: 18px;
-			font-weight: 600;
-		}
 	}
 </style>

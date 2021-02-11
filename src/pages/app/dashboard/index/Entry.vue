@@ -3,11 +3,12 @@
 		<navbar />
 		<flexBottom>
 			<div class="title-holder">
-				<p>How It Work</p>
+				<p>Hi, Melvin Lee</p>
+				<p>#GEM123456789</p>
 			</div>
 			<bkContent>
 				<div class="content-title">
-					
+					<p>Available Finance Limit</p>
 				</div>
 			</bkContent>
 		</flexBottom>
@@ -28,7 +29,7 @@ export default {
 	  	navbar,
 		flexBottom,
 		botbar,
-    	bkContent
+		bkContent
 	},
 }
 </script>
@@ -36,13 +37,18 @@ export default {
 <style lang="scss" scoped>
 	.title-holder {
 		width: 100%;
-		font-size: 16px;
+		font-size: 14px;
 		font-weight: 600;
 		background-color: #018fc3;
         color: #ffffff;
 		padding: 15px 20px;
+
+		p:not(:last-child) {
+			font-size: 16px;
+			margin-bottom: 5px;
+		}
 	}
-	
+
 	.content{
 		&-title {
 			font-size: 18px;
