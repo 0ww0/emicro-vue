@@ -38,7 +38,7 @@ export default {
 
             {
                 id: 5,
-                name: 'Legal - setup',
+                name: 'Legal - service',
                 path: '/legal/service'
             },
 
@@ -52,6 +52,30 @@ export default {
                 id: 7,
                 name: 'register - setup',
                 path: '/auth/register/setup'
+            },
+
+            {
+                id: 8,
+                name: 'app - account - index',
+                path: '/app/account/index'
+            },
+
+            {
+                id: 9,
+                name: 'app - howto - index',
+                path: '/app/howto/index'
+            },
+
+            {
+                id: 10,
+                name: 'app - dashboard - index',
+                path: '/app/dashboard/index'
+            },
+
+            {
+                id: 11,
+                name: 'app - loan - index',
+                path: '/app/loan/index'
             },
         ]
     }),

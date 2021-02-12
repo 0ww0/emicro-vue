@@ -1,9 +1,9 @@
 <template>
     <wrapper class='register'>
         <navbar />
-		<flexCenter>
+		<flexStart>
             <register />
-		</flexCenter>
+		</flexStart>
     </wrapper>
 </template>
 
@@ -11,14 +11,14 @@
 
 import navbar from './../../../../components/navbar/default/Back'
 import wrapper from './../../../../components/wrapper/Section'
-import flexCenter from './../../../../components/wrapper/FlexCenter'
+import flexStart from './../../../../components/wrapper/FlexStart'
 import register from './components/Register'
 
 export default {
     components: {
         wrapper,
         navbar,
-		flexCenter,
+		flexStart,
         register
     }
 }

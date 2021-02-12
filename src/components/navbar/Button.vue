@@ -1,7 +1,7 @@
 <template>
     <div class="navbar">
         <div class="link-button">
-			<a :href="public_url + '/auth/register.html'">Sign Up</a>
+			<a :href="public_url + '/auth/register/index.html'">Sign Up</a>
         </div>
 	</div>
 </template>

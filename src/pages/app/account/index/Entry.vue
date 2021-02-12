@@ -6,9 +6,7 @@
 				<p>How It Work</p>
 			</div>
 			<bkContent>
-				<div class="content-title">
-					
-				</div>
+				<linkLogo v-for = "data in linkLogo" :key="data.id" :text="data.text" :url="data.url" />
 			</bkContent>
 		</flexBottom>
 		<botbar />
@@ -21,6 +19,7 @@ import wrapper from './../../../../components/wrapper/Section'
 import flexBottom from './../../../../components/wrapper/FlexBottom'
 import botbar from './../../../../components/navbar/Bottom'
 import bkContent from './../../../../components/wrapper/BackgroundContent'
+import linkLogo from './../../../../components/LinkLogo'
 
 export default {
   	components: { 
@@ -28,8 +27,53 @@ export default {
 	  	navbar,
 		flexBottom,
 		botbar,
-    	bkContent
+    	bkContent,
+		linkLogo
 	},
+
+	data: () => ({
+        linkLogo : [
+			{
+				id: 1,
+				text: "Rate Description",
+				urL: "/"
+			},
+			{
+				id: 2,
+				text: "Frequently Asked Question",
+				urL: "/"
+			},
+			{
+				id: 3,
+				text: "Feedback",
+				urL: "/"
+			},
+			{
+				id: 4,
+				text: "About Emicro",
+				urL: "/"
+			},
+
+			{
+				id: 5,
+				text: "Privacy Policy",
+				urL: "/"
+			},
+
+			{
+				id: 6,
+				text: "Terms of Services",
+				urL: "/"
+			},
+
+			{
+				id: 7,
+				text: "Setting",
+				urL: "/"
+			},
+
+		]
+    }),
 }
 </script>
 
@@ -41,12 +85,5 @@ export default {
 		background-color: #018fc3;
         color: #ffffff;
 		padding: 15px 20px;
-	}
-	
-	.content{
-		&-title {
-			font-size: 18px;
-			font-weight: 600;
-		}
 	}
 </style>

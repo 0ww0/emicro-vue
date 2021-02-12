@@ -15,6 +15,8 @@ module.exports = {
         'js/legal/service': './src/pages/legal/service/index.js',
         'js/account/index': './src/pages/app/account/index/index.js',
         'js/dashboard/index': './src/pages/app/dashboard/index/index.js',
+        'js/dashboard/disclosure': './src/pages/app/dashboard/disclosure/index.js',
+        'js/dashboard/apply/index': './src/pages/app/dashboard/apply/index/index.js',
         'js/howto/index': './src/pages/app/howto/index/index.js',
         'js/loan/index': './src/pages/app/loan/index/index.js'
     },

@@ -1,7 +1,7 @@
 <template>
     <wrapper class="forgot">
 		<navbar/>
-		<flexCenter>
+		<flexStart>
 			<formW>
 				<notification v-if="errors" :message="errors" />
 
@@ -54,7 +54,7 @@
 				</div>
 
 			</formW>
-		</flexCenter>
+		</flexStart>
 	</wrapper>
 </template>
 
@@ -63,7 +63,7 @@ import notification from './../../../components/Notification'
 import navbar from './../../../components/navbar/default/Back'
 import wrapper from './../../../components/wrapper/Section'
 import formW from './../../../components/wrapper/Form'
-import flexCenter from './../../../components/wrapper/FlexCenter'
+import flexStart from './../../../components/wrapper/FlexStart'
 
 export default {
     name: "Forgot",
@@ -73,7 +73,7 @@ export default {
         navbar,
 		wrapper,
 		formW,
-		flexCenter
+		flexStart
     },
 
     data: () => ({
