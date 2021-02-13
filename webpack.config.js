@@ -17,6 +17,10 @@ module.exports = {
         'js/dashboard/index': './src/pages/app/dashboard/index/index.js',
         'js/dashboard/disclosure': './src/pages/app/dashboard/disclosure/index.js',
         'js/dashboard/apply/index': './src/pages/app/dashboard/apply/index/index.js',
+        'js/dashboard/apply/form/basic': './src/pages/app/dashboard/apply/form/basic/index.js',
+        'js/dashboard/apply/form/social': './src/pages/app/dashboard/apply/form/social/index.js',
+        'js/dashboard/apply/form/identity': './src/pages/app/dashboard/apply/form/identity/index.js',
+        'js/dashboard/apply/form/other': './src/pages/app/dashboard/apply/form/other/index.js',
         'js/howto/index': './src/pages/app/howto/index/index.js',
         'js/loan/index': './src/pages/app/loan/index/index.js'
     },

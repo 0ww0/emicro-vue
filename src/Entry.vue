@@ -74,6 +74,36 @@ export default {
 
             {
                 id: 11,
+                name: 'app - dashboard - disclosure',
+                path: '/app/dashboard/disclosure'
+            },
+
+            {
+                id: 12,
+                name: 'app - dashboard - apply - form - basic',
+                path: '/app/dashboard/apply/form/basic'
+            },
+
+            {
+                id: 13,
+                name: 'app - dashboard - apply - form - social',
+                path: '/app/dashboard/apply/form/social'
+            },
+
+            {
+                id: 14,
+                name: 'app - dashboard - apply - form - identity',
+                path: '/app/dashboard/apply/form/identity'
+            },
+
+            {
+                id: 15,
+                name: 'app - dashboard - apply - form - other',
+                path: '/app/dashboard/apply/form/other'
+            },
+
+            {
+                id: 16,
                 name: 'app - loan - index',
                 path: '/app/loan/index'
             },

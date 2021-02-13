@@ -34,7 +34,7 @@
 			font-size: 18px;
 		}
 
-        input {
+        input[type="text"] {
             width: 100%;
             padding: 10px;
             border-radius: 4px;

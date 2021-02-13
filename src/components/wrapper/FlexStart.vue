@@ -13,5 +13,6 @@
 		justify-content: flex-start;
 		width: 100%;
 		height: calc(100% - 60px);
+		background-color: #ebedf1;
 	}
 </style>
