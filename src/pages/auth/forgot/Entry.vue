@@ -1,6 +1,6 @@
 <template>
     <wrapper class="forgot">
-		<navbar/>
+		<navbar url="/auth/login.html"/>
 		<flexStart>
 			<formW>
 				<notification v-if="errors" :message="errors" />

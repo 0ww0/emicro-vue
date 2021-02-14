@@ -1,6 +1,6 @@
 <template>
     <wrapper class="product-disclosure-sheet">
-        <navbar />
+        <navbar url="/app/dashboard/index.html"/>
         <div class="text-holder">
             <div class="content-title">
 				<p>Product Disclosure Sheet</p>

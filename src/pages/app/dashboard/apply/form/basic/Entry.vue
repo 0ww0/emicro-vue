@@ -1,6 +1,6 @@
 <template>
     <wrapper class="basic-information">
-        <navbar />
+        <navbar url="/app/dashboard/index.html"/>
         <flexStart>
             <div class="navigation">
                 <div class="navi-group">

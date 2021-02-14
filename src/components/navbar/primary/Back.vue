@@ -1,7 +1,7 @@
 <template>
     <div class="navbar">
 		<div class="link-atag">
-			<a :href="public_url + '/auth/login.html'">
+			<a :href="public_url + url">
 				<ph-caret-left :size = "16" />
 				<span>Back</span>
 			</a>
@@ -16,6 +16,10 @@ import { PhCaretLeft } from "phosphor-vue"
 
 export default {
     name: "Navbar",
+
+	props: {
+		url: String,
+	},
 
 	components: {
 		logo,

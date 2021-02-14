@@ -1,6 +1,6 @@
 <template>
     <wrapper class='register'>
-        <navbar />
+        <navbar url="/auth/login.html"/>
 		<flexStart>
 			<setup />
 		</flexStart>

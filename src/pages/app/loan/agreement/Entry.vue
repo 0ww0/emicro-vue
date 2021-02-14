@@ -1,6 +1,6 @@
 <template>
     <wrapper class="basic-information">
-        <navbar />
+        <navbar url="/app/loan/index.html"/>
         <div class="text-holder">
             <div class="content-title">
 				<p>Moneylending Agreement</p>

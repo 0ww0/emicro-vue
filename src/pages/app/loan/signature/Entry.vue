@@ -1,6 +1,6 @@
 <template>
     <wrapper class="basic-information">
-        <navbar />
+        <navbar url="/app/loan/index.html"/>
         <flexStart>
             <div class="signature-pad">
                 <VueSignaturePad width="100%" height="100%" ref="signaturePad" />

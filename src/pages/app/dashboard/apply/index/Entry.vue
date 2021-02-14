@@ -1,6 +1,6 @@
 <template>
     <wrapper class="apply-now">
-        <navbar />
+        <navbar url="/app/dashboard/index.html"/>
         <flexStart>
             <div class="title-holder">
 				<p>Apply Now</p>
