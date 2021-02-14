@@ -58,12 +58,12 @@ export default {
     },
 
     data: () => ({
-		validate: {
-            mobile: false,
-            mobile_text: "",
-            password: false,
-            password_text: ""
-        }
+		validate : {
+			mobile: false,
+			mobile_text: "",
+			password: false,
+			password_text: "",
+		}
     }),
 
     computed: {
@@ -83,6 +83,48 @@ export default {
             return this.$store.getters.errors;
         }
     },
+
+	methods: {
+		validation () {
+			if(this.field.mobile === '') {
+				this.validate.mobile = true;
+				this.validate.mobile_text = 'Field cannnot be blank';
+				return false
+			} else {
+				this.validate.mobile = false;
+				this.validate.mobile_text = '';
+			}
+
+			if(this.field.mobile !== '') {
+				let regex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/gmi;
+				if(!regex.test(this.field.mobile)){
+					this.validate.mobile = true;
+					this.validate.mobile_text = 'Please provide a valid phone number. Ex: 60123456789 / 0123456789'
+					return false
+				}
+			} else {
+				this.validate.mobile = false;
+				this.validate.mobile_text = '';
+			}
+		
+			if(this.field.password === '') {
+				this.validate.password = true;
+				this.validate.password_text = 'Field cannnot be blank';
+				return false
+			} else {
+				this.validate.password = false;
+				this.validate.password_text = '';
+			}
+
+			return true
+		},
+
+		onSubmit () {
+			if(!this.validation()) {
+                return
+            }
+		}
+	}
 }
 </script>
 

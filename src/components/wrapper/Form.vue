@@ -35,7 +35,8 @@
 		}
 
         input[type="text"],
-        input[type="password"] {
+        input[type="password"],
+        input[type="tel"] {
             width: 100%;
             padding: 10px;
             border-radius: 4px;
@@ -86,7 +87,9 @@
 	}
 
 	.form-error {
-        input {
+        input[type="text"],
+        input[type="password"],
+        input[type="tel"] {
 		    border-color: #ca2e2e;
 	    }
         

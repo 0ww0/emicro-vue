@@ -1,7 +1,9 @@
 export const state = {
     field: {
-        mobile: "",
-        password: ""
+        password: "",
+        re_password: "",
+        email: "",
+        code: ""
     },
     isLoading: false,
     errors: null,
