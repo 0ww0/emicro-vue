@@ -20,38 +20,38 @@ export default {
 
             {
                 id: 2,
-                name: 'login',
+                name: 'auth - login',
                 path: '/auth/login'
             },
 
             {
                 id: 3,
-                name: 'forgot',
+                name: 'auth - forgot',
                 path: '/auth/forgot'
             },
 
             {
                 id: 4,
-                name: 'Legal - policy',
-                path: '/legal/policy'
-            },
-
-            {
-                id: 5,
-                name: 'Legal - service',
-                path: '/legal/service'
-            },
-
-            {
-                id: 6,
-                name: 'register - index',
+                name: 'auth - register - index',
                 path: '/auth/register/index'
             },
 
             {
-                id: 7,
-                name: 'register - setup',
+                id: 5,
+                name: 'auth - register - setup',
                 path: '/auth/register/setup'
+            },
+
+            {
+                id: 6,
+                name: 'legal - policy',
+                path: '/legal/policy'
+            },
+
+            {
+                id: 7,
+                name: 'legal - service',
+                path: '/legal/service'
             },
 
             {
@@ -80,32 +80,56 @@ export default {
 
             {
                 id: 12,
+                name: 'app - dashboard - apply - index',
+                path: '/app/dashboard/apply/index'
+            },
+
+            {
+                id: 13,
                 name: 'app - dashboard - apply - form - basic',
                 path: '/app/dashboard/apply/form/basic'
             },
 
             {
-                id: 13,
+                id: 14,
                 name: 'app - dashboard - apply - form - social',
                 path: '/app/dashboard/apply/form/social'
             },
 
             {
-                id: 14,
+                id: 15,
                 name: 'app - dashboard - apply - form - identity',
                 path: '/app/dashboard/apply/form/identity'
             },
 
             {
-                id: 15,
+                id: 16,
                 name: 'app - dashboard - apply - form - other',
                 path: '/app/dashboard/apply/form/other'
             },
 
             {
-                id: 16,
+                id: 17,
                 name: 'app - loan - index',
                 path: '/app/loan/index'
+            },
+
+            {
+                id: 18,
+                name: 'app - loan - notice',
+                path: '/app/loan/notice'
+            },
+
+            {
+                id: 19,
+                name: 'app - loan - agreement',
+                path: '/app/loan/agreement'
+            },
+
+            {
+                id: 20,
+                name: 'app - loan - signature',
+                path: '/app/loan/signature'
             },
         ]
     }),
