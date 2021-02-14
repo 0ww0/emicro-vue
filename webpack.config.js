@@ -6,31 +6,31 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 module.exports = {
     mode: 'development',
     entry: {
-        'dist/js/main': './src/main.js',
-        'dist/js/auth/login': './src/pages/auth/login/index.js',
-        'dist/js/auth/forgot': './src/pages/auth/forgot/index.js',
-        'dist/js/auth/register/index': './src/pages/auth/register/index/index.js',
-        'dist/js/auth/register/setup': './src/pages/auth/register/setup/index.js',
-        'dist/js/legal/policy': './src/pages/legal/policy/index.js',
-        'dist/js/legal/service': './src/pages/legal/service/index.js',
-        'dist/js/account/index': './src/pages/app/account/index/index.js',
-        'dist/js/dashboard/index': './src/pages/app/dashboard/index/index.js',
-        'dist/js/dashboard/disclosure': './src/pages/app/dashboard/disclosure/index.js',
-        'dist/js/dashboard/apply/index': './src/pages/app/dashboard/apply/index/index.js',
-        'dist/js/dashboard/apply/form/basic': './src/pages/app/dashboard/apply/form/basic/index.js',
-        'dist/js/dashboard/apply/form/social': './src/pages/app/dashboard/apply/form/social/index.js',
-        'dist/js/dashboard/apply/form/identity': './src/pages/app/dashboard/apply/form/identity/index.js',
-        'dist/js/dashboard/apply/form/other': './src/pages/app/dashboard/apply/form/other/index.js',
-        'dist/js/howto/index': './src/pages/app/howto/index/index.js',
-        'dist/js/loan/index': './src/pages/app/loan/index/index.js',
-        'dist/js/loan/agreement': './src/pages/app/loan/agreement/index.js',
-        'dist/js/loan/notice': './src/pages/app/loan/notice/index.js',
-        'dist/js/loan/signature': './src/pages/app/loan/signature/index.js'
+        'js/main': './src/main.js',
+        'js/auth/login': './src/pages/auth/login/index.js',
+        'js/auth/forgot': './src/pages/auth/forgot/index.js',
+        'js/auth/register/index': './src/pages/auth/register/index/index.js',
+        'js/auth/register/setup': './src/pages/auth/register/setup/index.js',
+        'js/legal/policy': './src/pages/legal/policy/index.js',
+        'js/legal/service': './src/pages/legal/service/index.js',
+        'js/account/index': './src/pages/app/account/index/index.js',
+        'js/dashboard/index': './src/pages/app/dashboard/index/index.js',
+        'js/dashboard/disclosure': './src/pages/app/dashboard/disclosure/index.js',
+        'js/dashboard/apply/index': './src/pages/app/dashboard/apply/index/index.js',
+        'js/dashboard/apply/form/basic': './src/pages/app/dashboard/apply/form/basic/index.js',
+        'js/dashboard/apply/form/social': './src/pages/app/dashboard/apply/form/social/index.js',
+        'js/dashboard/apply/form/identity': './src/pages/app/dashboard/apply/form/identity/index.js',
+        'js/dashboard/apply/form/other': './src/pages/app/dashboard/apply/form/other/index.js',
+        'js/howto/index': './src/pages/app/howto/index/index.js',
+        'js/loan/index': './src/pages/app/loan/index/index.js',
+        'js/loan/agreement': './src/pages/app/loan/agreement/index.js',
+        'js/loan/notice': './src/pages/app/loan/notice/index.js',
+        'js/loan/signature': './src/pages/app/loan/signature/index.js'
     },
     output: {
-        path: path.resolve(__dirname, './dist/'),
+        path: path.resolve(__dirname, 'dist'),
         filename: '[name].bundle.js',
-        assetModuleFilename: 'dist/assets/[name][ext]'
+        assetModuleFilename: 'assets/[name][ext]'
     },
     devServer: {
         historyApiFallback: true,
@@ -80,14 +80,14 @@ module.exports = {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: 'asset/resource',
                 generator: {
-                    filename: 'dist/assets/image/[name][ext]'
+                    filename: 'assets/image/[name][ext]'
                 }
             },
             {
                 test: /\.(woff|woff2|eot|ttf|otf)$/i,
                 type: 'asset/resource',
                 generator: {
-                    filename: 'dist/assets/font/[name][ext]'
+                    filename: 'assets/font/[name][ext]'
                 }
             },
         ]
