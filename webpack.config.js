@@ -22,7 +22,10 @@ module.exports = {
         'js/dashboard/apply/form/identity': './src/pages/app/dashboard/apply/form/identity/index.js',
         'js/dashboard/apply/form/other': './src/pages/app/dashboard/apply/form/other/index.js',
         'js/howto/index': './src/pages/app/howto/index/index.js',
-        'js/loan/index': './src/pages/app/loan/index/index.js'
+        'js/loan/index': './src/pages/app/loan/index/index.js',
+        'js/loan/agreement': './src/pages/app/loan/agreement/index.js',
+        'js/loan/notice': './src/pages/app/loan/notice/index.js',
+        'js/loan/signature': './src/pages/app/loan/signature/index.js'
     },
     output: {
         path: path.resolve(__dirname, './dist/'),

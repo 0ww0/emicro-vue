@@ -34,7 +34,8 @@
 			font-size: 18px;
 		}
 
-        input[type="text"] {
+        input[type="text"],
+        input[type="password"] {
             width: 100%;
             padding: 10px;
             border-radius: 4px;
