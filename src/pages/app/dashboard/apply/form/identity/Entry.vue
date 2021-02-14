@@ -20,8 +20,13 @@
                         <p>NRIC front photo*</p>
                         <div class="form-input">
                             <div class="form-file">
-                                <input type="file" id="file" />
-                                <label for="file">Upload</label>
+                                <div class="preview" v-if="field.front_photo">
+                                    <img :src="field.front_photo">
+                                </div>
+                                <div class="form" v-else>
+                                    <input @change="frontPhoto($event)" type="file" id="front_file" />
+                                    <label for="front_file">Upload</label>
+                                </div>
                             </div>
                             <div class="example-image">
                                 <div class="background"></div>
@@ -43,8 +48,13 @@
                         <p>NRIC back photo*</p>
                         <div class="form-input">
                             <div class="form-file">
-                                <input type="file" id="file" />
-                                <label for="file">Upload</label>
+                                <div class="preview" v-if="field.back_photo">
+                                    <img :src="field.back_photo">
+                                </div>
+                                <div class="form" v-else>
+                                    <input @change="backPhoto($event)" type="file" id="back_file" />
+                                    <label for="back_file">Upload</label>
+                                </div>
                             </div>
                             <div class="example-image">
                                 <div class="background"></div>
@@ -66,8 +76,13 @@
                         <p>Identity Confirmation*</p>
                         <div class="form-input">
                             <div class="form-file">
-                                <input type="file" id="file" />
-                                <label for="file">Upload</label>
+                                <div class="preview" v-if="field.selfie">
+                                    <img :src="field.selfie">
+                                </div>
+                                <div class="form" v-else>
+                                    <input @change="selfie($event)" type="file" id="selfie_file" />
+                                    <label for="selfie_file">Upload</label>
+                                </div>
                             </div>
                             <div class="example-image">
                                 <div class="background"></div>
@@ -122,6 +137,86 @@ export default {
         formW
     },
 
+    data: () => ({
+		validate : {
+            front_photo: false,
+            front_photo_text: "",
+            back_photo: false,
+            back_photo_text: "",
+            selfie: false,
+            selfie_text: "",
+		}
+    }),
+
+    computed: {
+        public_url () {
+            return window.location.origin;
+        },
+
+        field () {
+            return this.$store.getters.field;
+        },
+
+        isLoading () {
+            return this.$store.getters.isLoading;
+        },
+
+        errors () {
+            return this.$store.getters.errors;
+        }
+    },
+
+    methods: {
+		validation () {
+			if(this.field.front_photo === '') {
+				this.validate.front_photo = true;
+				this.validate.front_photo_text = 'Field cannnot be blank';
+				return false
+			} else {
+				this.validate.front_photo = false;
+				this.validate.front_photo_text = '';
+			}
+		
+			if(this.field.back_photo === '') {
+				this.validate.back_photo = true;
+				this.validate.back_photo_text = 'Field cannnot be blank';
+				return false
+			} else {
+				this.validate.back_photo = false;
+				this.validate.back_photo_text = '';
+			}
+
+            if(this.field.selfie === '') {
+				this.validate.selfie = true;
+				this.validate.selfie_text = 'Field cannnot be blank';
+				return false
+			} else {
+				this.validate.selfie = false;
+				this.validate.selfie_text = '';
+			}
+
+			return true
+		},
+
+        frontPhoto(event) {
+            let file = event.target.files[0]
+            this.field.front_photo = window.URL.createObjectURL(file)
+        },
+
+        backPhoto(event) {
+            this.field.back_photo = event.target.files[0]
+        },
+
+        selfie(event) {
+            this.field.selfie = event.target.files[0]
+        },
+
+		onSubmit () {
+			if(!this.validation()) {
+                return
+            }
+		}
+	}
 }
 </script>
 

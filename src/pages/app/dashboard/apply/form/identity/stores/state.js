@@ -1,7 +1,8 @@
 export const state = {
     field: {
-        mobile: "",
-        password: ""
+        front_photo: "",
+        back_photo: "",
+        selfie: ""
     },
     isLoading: false,
     errors: null,

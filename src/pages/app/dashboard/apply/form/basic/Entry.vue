@@ -18,58 +18,58 @@
                     </div>
 
                     <div class="form-control">
-                        <label :class="[]">
+                        <label :class="[ validate.name ? 'form-error' : '' ]">
                             <p>Name</p>
-                            <input  type="text" name="name" placeholder="Name">
-                            <p  class="validate">  </p>
+                            <input v-model="field.name" type="text" placeholder="Name">
+                            <p v-if="validate.name" class="validate"> {{ validate.name_text }} </p>
                         </label>
                     </div>
 
                     <div class="form-control">
-                        <label :class="[]">
+                        <label :class="[ validate.nric ? 'form-error' : '' ]">
                             <p>NRIC number</p>
-                            <input  type="text" name="nric" placeholder="NRIC number">
-                            <p  class="validate">  </p>
+                            <input v-model="field.nric" type="text" placeholder="NRIC number">
+                            <p v-if="validate.nric" class="validate"> {{ validate.nric_text }} </p>
                         </label>
                     </div>
 
                     <div class="form-control">
-                        <label :class="[]">
+                        <label :class="[ validate.dob ? 'form-error' : '' ]">
                             <p>Date of birth</p>
-                            <input  type="text" name="dob" placeholder="Date of Birth">
-                            <p  class="validate">  </p>
+                            <input v-model="field.dob" type="text" placeholder="Date of Birth">
+                            <p v-if="validate.dob" class="validate"> {{ validate.dob_text }} </p>
                         </label>
                     </div>
 
                     <div class="form-control">
-                        <label :class="[]">
+                        <label :class="[ validate.gender ? 'form-error' : '' ]">
                             <p>Gender</p>
-                            <input  type="text" name="gender" placeholder="Gender">
-                            <p  class="validate">  </p>
+                            <input v-model="field.gender" type="text" placeholder="Gender">
+                            <p v-if="validate.gender" class="validate"> {{ validate.gender_text }} </p>
                         </label>
                     </div>
 
                     <div class="form-control">
-                        <label :class="[]">
+                        <label :class="[ validate.race ? 'form-error' : '' ]">
                             <p>Race</p>
-                            <input  type="text" name="race" placeholder="Race">
-                            <p  class="validate">  </p>
+                            <input v-model="field.race" type="text" placeholder="Race">
+                            <p v-if="validate.race" class="validate"> {{ validate.race_text }} </p>
                         </label>
                     </div>
 
                     <div class="form-control">
-                        <label :class="[]">
+                        <label :class="[ validate.maritial ? 'form-error' : '' ]">
                             <p>Maritial status</p>
-                            <input  type="text" name="maritial" placeholder="Maritial Status">
-                            <p  class="validate">  </p>
+                            <input v-model="field.maritial" type="text" placeholder="Maritial Status">
+                            <p v-if="validate.maritial" class="validate"> {{ validate.maritial_text }} </p>
                         </label>
                     </div>
 
                     <div class="form-control">
-                        <label :class="[]">
+                        <label :class="[ validate.education ? 'form-error' : '' ]">
                             <p>Education status</p>
-                            <input  type="text" name="education" placeholder="Education Status">
-                            <p  class="validate">  </p>
+                            <input v-model="field.education" type="text" placeholder="Education Status">
+                            <p v-if="validate.education" class="validate"> {{ validate.education_text }} </p>
                         </label>
                     </div>
 
@@ -84,42 +84,42 @@
                     </div>
 
                     <div class="form-control">
-                        <label :class="[]">
+                        <label :class="[ validate.address_line_1 ? 'form-error' : '' ]">
                             <p>Address line 1</p>
-                            <input  type="text" name="address" placeholder="Address line 1">
-                            <p  class="validate">  </p>
+                            <input v-model="field.address_line_1" type="text" placeholder="Address line 1">
+                            <p v-if="validate.address_line_1" class="validate"> {{ validate.address_line_1_text }} </p>
                         </label>
                     </div>
                     
                     <div class="form-control">
-                        <label :class="[]">
+                        <label :class="[ validate.address_line_2 ? 'form-error' : '' ]">
                             <p>Address line 2</p>
-                            <input  type="text" name="address" placeholder="Address line 2">
-                            <p  class="validate">  </p>
+                            <input v-model="field.address_line_2" type="text" placeholder="Address line 2">
+                            <p v-if="validate.address_line_2" class="validate"> {{ validate.address_line_2_text }} </p>
                         </label>
                     </div>
 
                     <div class="form-control">
-                        <label :class="[]">
+                        <label :class="[ validate.postcode ? 'form-error' : '' ]">
                             <p>Postcode</p>
-                            <input  type="text" name="postcode" placeholder="Postcode">
-                            <p  class="validate">  </p>
+                            <input v-model="field.postcode" type="text" placeholder="Postcode">
+                            <p v-if="validate.postcode" class="validate"> {{ validate.postcode_text }} </p>
                         </label>
                     </div>
 
                     <div class="form-control">
-                        <label :class="[]">
+                        <label :class="[ validate.state ? 'form-error' : '' ]">
                             <p>State</p>
-                            <input  type="text" name="state" placeholder="State">
-                            <p  class="validate">  </p>
+                            <input v-model="field.state" type="text" placeholder="State">
+                            <p v-if="validate.state" class="validate"> {{ validate.state_text }} </p>
                         </label>
                     </div>
 
                     <div class="form-control">
-                        <label :class="[]">
+                        <label :class="[ validate.city ? 'form-error' : '' ]">
                             <p>City</p>
-                            <input  type="text" name="city" placeholder="City">
-                            <p  class="validate">  </p>
+                            <input v-model="field.city" type="text"  placeholder="City">
+                            <p v-if="validate.city" class="validate"> {{ validate.city_text }} </p>
                         </label>
                     </div>
 
@@ -134,16 +134,16 @@
                     </div>
 
                     <div class="form-control">
-                        <label :class="[]">
+                        <label :class="[ validate.email ? 'form-error' : '' ]">
                             <p>Email Address</p>
-                            <input  type="text" name="email" placeholder="Email Address">
-                            <p  class="validate">  </p>
+                            <input v-model="field.email" type="text" placeholder="Email Address">
+                            <p v-if="validate.email" class="validate"> {{ validate.email_text }} </p>
                         </label>
                     </div>
                 </formW>
             </div>
             <div class="form-button">
-                <button class="submit">
+                <button class="submit" @click="onSubmit()">
                     Next
                 </button>
             </div>
@@ -165,6 +165,179 @@ export default {
         formW
     },
 
+    data: () => ({
+		validate : {
+            name: false,
+			name_text: "",
+            nric: false,
+            nric_text: "",
+            dob: false,
+            dob_text: "",
+            gender: false,
+            gender_text: "",
+            race: false,
+            race_text: "",
+            maritial: false,
+            maritial_text: "",
+            education: false,
+            education_text: "",
+            address_line_1: false,
+            address_line_1_text: "",
+            address_line_2: false,
+            address_line_2_text: "",
+            postcode: false,
+            postcode_text: "",
+            state: false,
+            state_text: "",
+            city: false,
+            city_text: "",
+            email: false,
+            email_text: ""
+		}
+    }),
+
+    computed: {
+        field () {
+            return this.$store.getters.field;
+        },
+
+        isLoading () {
+            return this.$store.getters.isLoading;
+        },
+
+        errors () {
+            return this.$store.getters.errors;
+        }
+    },
+
+    methods: {
+		validation () {
+			if(this.field.name === '') {
+				this.validate.name = true;
+				this.validate.name_text = 'Field cannnot be blank';
+				return false
+			} else {
+				this.validate.name = false;
+				this.validate.name_text = '';
+			}
+		
+			if(this.field.nric === '') {
+				this.validate.nric = true;
+				this.validate.nric_text = 'Field cannnot be blank';
+				return false
+			} else {
+				this.validate.nric = false;
+				this.validate.nric_text = '';
+			}
+
+            if(this.field.dob === '') {
+				this.validate.dob = true;
+				this.validate.dob_text = 'Field cannnot be blank';
+				return false
+			} else {
+				this.validate.dob = false;
+				this.validate.dob_text = '';
+			}
+
+            if(this.field.gender === '') {
+				this.validate.gender = true;
+				this.validate.gender_text = 'Field cannnot be blank';
+				return false
+			} else {
+				this.validate.gender = false;
+				this.validate.gender_text = '';
+			}
+
+            if(this.field.race === '') {
+				this.validate.race = true;
+				this.validate.race_text = 'Field cannnot be blank';
+				return false
+			} else {
+				this.validate.race = false;
+				this.validate.race_text = '';
+			}
+
+            if(this.field.maritial === '') {
+				this.validate.maritial = true;
+				this.validate.maritial_text = 'Field cannnot be blank';
+				return false
+			} else {
+				this.validate.maritial = false;
+				this.validate.maritial_text = '';
+			}
+
+            if(this.field.education === '') {
+				this.validate.education = true;
+				this.validate.education_text = 'Field cannnot be blank';
+				return false
+			} else {
+				this.validate.education = false;
+				this.validate.education_text = '';
+			}
+
+            if(this.field.address_line_1 === '') {
+				this.validate.address_line_1 = true;
+				this.validate.address_line_1_text = 'Field cannnot be blank';
+				return false
+			} else {
+				this.validate.address_line_1 = false;
+				this.validate.address_line_1_text = '';
+			}
+
+            if(this.field.address_line_2 === '') {
+				this.validate.address_line_2 = true;
+				this.validate.address_line_2_text = 'Field cannnot be blank';
+				return false
+			} else {
+				this.validate.address_line_2 = false;
+				this.validate.address_line_2_text = '';
+			}
+
+            if(this.field.postcode === '') {
+				this.validate.postcode = true;
+				this.validate.postcode_text = 'Field cannnot be blank';
+				return false
+			} else {
+				this.validate.postcode = false;
+				this.validate.postcode_text = '';
+			}
+
+            if(this.field.state === '') {
+				this.validate.state = true;
+				this.validate.state_text = 'Field cannnot be blank';
+				return false
+			} else {
+				this.validate.state = false;
+				this.validate.state_text = '';
+			}
+
+            if(this.field.city === '') {
+				this.validate.city = true;
+				this.validate.city_text = 'Field cannnot be blank';
+				return false
+			} else {
+				this.validate.city = false;
+				this.validate.city_text = '';
+			}
+
+            if(this.field.email === '') {
+				this.validate.email = true;
+				this.validate.email_text = 'Field cannnot be blank';
+				return false
+			} else {
+				this.validate.email = false;
+				this.validate.email_text = '';
+			}
+
+			return true
+		},
+
+		onSubmit () {
+			if(!this.validation()) {
+                return
+            }
+		}
+	}
 }
 </script>
 
